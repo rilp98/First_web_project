@@ -1,0 +1,204 @@
+:root{
+	--green:#63e67e;
+	--blue:#1167b0;
+	--white:#FFFFFF;
+	--buttonBlue:#1c89bc;
+	--titulos:'Source Sans Pro', sans-serif;
+	--texto:arial;
+	--opacidadLetras:85%;
+	--widthBotonPequeno:160px;
+	--tamanoTitulosH2:36px;
+}
+body{
+	margin:0px;
+}
+.enlace{
+	text-decoration:none;
+	color:var(--white);
+}
+.parrafo{
+	font-family:arial;
+	color:#343434;
+	line-height:25px;
+	text-align:justify;
+}
+
+.icono{
+	color:#44a43d;
+	font-size:55px;
+	text-align:center;
+}
+
+.menu{
+    display:flex;
+    justify-content:space-around;
+    padding:0 40px;
+    align-items:center;
+    margin:0px;
+	background: linear-gradient(to right,var(--green),var(--blue));
+	color:var(--white);
+	 
+}
+
+.menu__logo{ 
+	font-family:var(--titulos);
+	opacity:var(--opacidadLetras);
+}
+
+.menu__lista{
+	display:flex;
+
+}
+
+ .menu__lista li{
+    color:var(--white);/* cuando se le coloque los enlaces a todas las opciones, esta propiedad*/
+	font-family:var(--texto);
+	display:flex;
+	align-items:center;
+	padding:0px 20px;
+	opacity:var(--opacidadLetras);
+}
+
+
+
+.menu__lista .enlace:hover {
+	text-decoration:underline;
+	text-decoration-color: var(--white) ;
+}
+
+.principal{
+	height:550px;
+	background: linear-gradient(to right,var(--green),var(--blue));
+	text-align:center;
+}
+.principal__titulo{
+	padding-top:150px;
+	font-family:var(--titulos);
+	color:var(--white);
+	 font-size:50px;
+	 margin:0px;
+	 margin-bottom: 20px;
+	 }
+.principal__contenedorBotones{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.boton{
+   height:40px;
+   font-family: 'Libre Baskerville', serif;
+   text-transform:uppercase;
+   font-size:10px;
+   background-color:var(--buttonBlue);
+   border:0px;
+   font-weight:bolder;
+   cursor:pointer;
+   box-shadow: -2px 2px 10px #666;/*el primero es positivo se desplaza hacia la derecha,2 si es positivo hacia arriba, 3(opcional)
+   como se va a difuminar y el ultimo indica el color*/
+   border-radius:3px;
+   opacity:var(--opacidadLetras);
+}
+.boton:hover{ 
+background-color:#50c5b7;
+}
+.boton i { /* los iconos de los botones*/
+	padding-left:12px;
+	font-size:16px;
+}
+
+.boton--descarga{
+	width:190px;
+}
+.boton--empezar{
+	margin-left:10px;
+	width:var(--widthBotonPequeno);
+}
+
+.articulo{
+	display:flex;
+	justify-content:flex-start;
+	height:450px;
+}
+.articulo__titulo{
+	font-size:var(--tamanoTitulosH2);
+	font-family:var(--titulos);
+}
+
+.articulo__texto{
+	padding: 50px 50px;
+}
+ 
+
+.boton--parrafo{
+	width:var(--widthBotonPequeno);
+}
+
+.servicios__titulo{
+	margin-top:60px; 
+	text-align:center;
+	font-family:var(--titulos);
+	font-size:var(--tamanoTitulosH2);
+	opacity:var(--opacidadLetras);
+}
+.servicios__contenedorTipos{
+	display:flex;
+	justify-content:space-between;
+	padding-right:60px;
+}
+.servicios__tipo{
+	margin-top:30px;
+	text-align:justify;
+	width:750px;
+	padding-left:60px;
+ }
+.servicios__subtitulo{
+	font-size:25px;
+	font-family:var(--titulos);
+	text-align:center;
+	color:#4a4a4a;
+}
+
+
+
+.footer{
+	background: linear-gradient(to right, var(--green),var(--blue));
+	color:var(--white);
+	font-family:var(--texto);
+	font-weight:bold;
+	width:100%;
+	height:50px;
+	display: flex;
+	align-items:center;
+}
+
+.footer__icono{
+	color:red;
+	opacity:0.5;
+}
+
+.animacion{
+	animation-duration:1s;
+	animation-fill-mode:both;
+	animation-name:animacionTexto;
+
+	-webkit-animation-duration:4s;
+	-webkit-animation-fill-mode:both;
+	-webkit-animation-name:animacionTexto;
+}
+
+@keyframes animacionTexto{
+	from{
+	  opacity:0;
+	  transform:translate3d(0,-100%,0);
+	  -webkit-transform:translate3d(0,-100%,0);
+
+	}
+
+	to{
+		opacity:1;
+		transform:translate3d(0,0,0);
+		-webkit-transform:translate3d(0,0,0);
+
+	}
+}
+
